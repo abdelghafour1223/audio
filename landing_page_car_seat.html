@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مقعد السيارة المحمول للأطفال - 299 درهم</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: white;
+            padding: 40px 20px;
+            margin: 30px auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-images {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .hero-images img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+        }
+
+        .hero-text h2 {
+            font-size: 2.2em;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 3em;
+            color: #e74c3c;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 0.6em;
+            margin-left: 10px;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 20px 50px;
+            font-size: 1.5em;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(245, 87, 108, 0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin: 20px 0;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(245, 87, 108, 0.6);
+        }
+
+        /* Features */
+        .features {
+            background: white;
+            padding: 50px 20px;
+            margin: 30px auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 40px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .feature-item h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        /* Video Section */
+        .video-section {
+            background: white;
+            padding: 50px 20px;
+            margin: 30px auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .video-section h2 {
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 30px;
+        }
+
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: white;
+            padding: 50px 20px;
+            margin: 30px auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 40px;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-item {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            border-right: 4px solid #667eea;
+        }
+
+        .testimonial-rating {
+            color: #ffd700;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .testimonial-location {
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        /* Order Form */
+        .order-form {
+            background: white;
+            padding: 50px 20px;
+            margin: 30px auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .order-form h2 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 40px;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1.1em;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .cod-badge {
+            background: #27ae60;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .submit-button {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+            padding: 20px;
+            width: 100%;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.5em;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(46, 204, 113, 0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(46, 204, 113, 0.6);
+        }
+
+        /* Footer */
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .price {
+                font-size: 2.5em;
+            }
+
+            .features-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Thank You Page Styles */
+        .thank-you-page {
+            display: none;
+            background: white;
+            padding: 50px 20px;
+            margin: 30px auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .thank-you-page.active {
+            display: block;
+        }
+
+        .success-icon {
+            font-size: 5em;
+            color: #27ae60;
+            margin-bottom: 30px;
+        }
+
+        .thank-you-page h2 {
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .thank-you-page p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .whatsapp-button {
+            background: #25D366;
+            color: white;
+            padding: 20px 40px;
+            font-size: 1.3em;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 30px;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+        }
+
+        .whatsapp-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+        }
+
+        .order-details {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>🚗 مقعد السيارة المحمول للأطفال 🚗</h1>
+        <p>الأمان والراحة لطفلك في كل رحلة</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container" id="mainContent">
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="hero-content">
+                <div class="hero-images">
+                    <img src="https://raw.githubusercontent.com/abdelghafour1223/audio/ce36aa8a06e3a85220a359d48cb4ad4a5bd25ea8/WhatsApp%20Image%202025-09-30%20at%2015.53.06_f70e7a28.jpg" alt="مقعد السيارة للأطفال 1">
+                    <img src="https://raw.githubusercontent.com/abdelghafour1223/audio/refs/heads/main/WhatsApp%20Image%202025-09-30%20at%2015.53.05_6f92e613.jpg" alt="مقعد السيارة للأطفال 2">
+                </div>
+                <div class="hero-text">
+                    <h2>احمِ طفلك مع أفضل مقعد سيارة محمول</h2>
+                    <p style="font-size: 1.2em; line-height: 1.8; margin: 20px 0;">
+                        مقعد سيارة محمول مصمم خصيصاً لراحة وأمان طفلك. خفيف الوزن، سهل الحمل، ومطابق لمعايير السلامة الدولية.
+                    </p>
+                    <div class="price">
+                        299 درهم
+                        <span class="old-price">599 درهم</span>
+                    </div>
+                    <p style="color: #e74c3c; font-size: 1.3em; font-weight: bold;">
+                        ⚡ عرض محدود! خصم 50% ⚡
+                    </p>
+                    <button class="cta-button" onclick="scrollToForm()">اطلب الآن</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="features">
+            <h2>لماذا تختار مقعدنا؟</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>أمان معتمد</h3>
+                    <p>مطابق لمعايير السلامة الأوروبية والعالمية، مع أحزمة أمان متعددة النقاط</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🎒</div>
+                    <h3>محمول وخفيف</h3>
+                    <p>قابل للطي والحمل بسهولة، مثالي للسفر والتنقل بين السيارات</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💺</div>
+                    <h3>راحة فائقة</h3>
+                    <p>تصميم مريح مع وسادة ناعمة لضمان راحة طفلك في الرحلات الطويلة</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>سهل التركيب</h3>
+                    <p>لا يحتاج لتثبيت معقد، يمكن استخدامه في أي سيارة خلال ثوانٍ</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">👶</div>
+                    <h3>مناسب لعدة أعمار</h3>
+                    <p>مصمم للأطفال من 4 إلى 12 سنة (22-45 كجم)</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🧼</div>
+                    <h3>سهل التنظيف</h3>
+                    <p>مواد قابلة للغسل والتنظيف السريع</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video Section -->
+        <div class="video-section">
+            <h2>شاهد المنتج بالفيديو</h2>
+            <p style="margin-bottom: 30px; font-size: 1.1em;">اكتشف مميزات المنتج وطريقة استخدامه</p>
+            <div class="video-container">
+                <iframe src="https://drive.google.com/file/d/1L_Vd9dSRkmLoY6JQcdzZ89gCX4XgJMZR/preview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Testimonials Section -->
+        <div class="testimonials">
+            <h2>ماذا يقول عملاؤنا</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-item">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "منتج رائع جداً! استخدمته في رحلتنا الأخيرة وكان مريح جداً لابني. خفيف وسهل الحمل، وأهم شيء أنه آمن. أنصح به بشدة!"
+                    </p>
+                    <p class="testimonial-author">فاطمة الزهراء</p>
+                    <p class="testimonial-location">الدار البيضاء</p>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "بصراحة توقعت أقل من هكذا! المقعد جودة عالية والسعر ممتاز. بنتي عمرها 5 سنوات ومرتاحة فيه بزاف. التوصيل كان سريع والدفع عند الاستلام يعطي ثقة."
+                    </p>
+                    <p class="testimonial-author">محمد العلوي</p>
+                    <p class="testimonial-location">الرباط</p>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "أحسن حاجة شريتها لولادي! كنت كنخاف نستعملوا تاكسي بسبب عدم وجود مقعد للأطفال، دابا بهاد المقعد المحمول ولاو آمنين فكل رحلة. شكراً ليكم!"
+                    </p>
+                    <p class="testimonial-author">سلمى بنعلي</p>
+                    <p class="testimonial-location">مراكش</p>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "المنتج وصل في الوقت المحدد والجودة فوق التوقعات. ولدي عمره 6 سنوات ومرتاح فيه بزاف. التركيب ساهل وما كيحتاج وقت. حتى الثمن مناسب جداً."
+                    </p>
+                    <p class="testimonial-author">ياسين الإدريسي</p>
+                    <p class="testimonial-location">فاس</p>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "ممتازة! صغيرة وخفيفة، كنحطها في الشنطة ديال السيارة. وقت نخرجو للعائلة أو نسافرو، كتكون عندي دائماً. الأطفال آمنين وأنا مرتاحة."
+                    </p>
+                    <p class="testimonial-author">نادية الفاسي</p>
+                    <p class="testimonial-location">طنجة</p>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "استثمار يستحق! أحسن من المقاعد الكبيرة لأنو محمول وسهل الاستعمال. استخدمته في سيارتي وسيارة أمي. خدمة العملاء ممتازة والتوصيل سريع."
+                    </p>
+                    <p class="testimonial-author">عبد الرحمن التازي</p>
+                    <p class="testimonial-location">أكادير</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Order Form -->
+        <div class="order-form" id="orderForm">
+            <h2>🎁 اطلب الآن واستفد من العرض الخاص 🎁</h2>
+            <div class="form-container">
+                <form id="productOrderForm" onsubmit="submitOrder(event)">
+                    <div class="form-group">
+                        <label for="fullName">الاسم الكامل *</label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="أدخل اسمك الكامل">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">المدينة *</label>
+                        <select id="city" name="city" required>
+                            <option value="">اختر المدينة</option>
+                            <option value="الدار البيضاء">الدار البيضاء</option>
+                            <option value="الرباط">الرباط</option>
+                            <option value="فاس">فاس</option>
+                            <option value="مراكش">مراكش</option>
+                            <option value="طنجة">طنجة</option>
+                            <option value="أكادير">أكادير</option>
+                            <option value="مكناس">مكناس</option>
+                            <option value="وجدة">وجدة</option>
+                            <option value="القنيطرة">القنيطرة</option>
+                            <option value="تطوان">تطوان</option>
+                            <option value="سلا">سلا</option>
+                            <option value="الجديدة">الجديدة</option>
+                            <option value="بني ملال">بني ملال</option>
+                            <option value="الصويرة">الصويرة</option>
+                            <option value="الناظور">الناظور</option>
+                            <option value="خريبكة">خريبكة</option>
+                            <option value="تازة">تازة</option>
+                            <option value="سطات">سطات</option>
+                            <option value="العيون">العيون</option>
+                            <option value="المحمدية">المحمدية</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">رقم الهاتف *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="06XXXXXXXX" pattern="[0-9]{10}">
+                    </div>
+
+                    <div class="cod-badge">
+                        💵 الدفع عند الاستلام متاح
+                    </div>
+
+                    <button type="submit" class="submit-button">
+                        ✅ أكد طلبك الآن - 299 درهم
+                    </button>
+
+                    <p style="text-align: center; margin-top: 20px; color: #666;">
+                        🚚 التوصيل: 2-4 أيام عمل<br>
+                        💯 ضمان استرجاع المال خلال 7 أيام
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thank You Page -->
+    <div class="container">
+        <div class="thank-you-page" id="thankYouPage">
+            <div class="success-icon">✅</div>
+            <h2>شكراً لك! تم استلام طلبك بنجاح</h2>
+            <p>نحن ممتنون لثقتك بنا ونتطلع لخدمتك</p>
+
+            <div class="order-details">
+                <h3 style="color: #667eea; margin-bottom: 20px;">تفاصيل الطلب</h3>
+                <p><strong>الاسم:</strong> <span id="confirmName"></span></p>
+                <p><strong>المدينة:</strong> <span id="confirmCity"></span></p>
+                <p><strong>رقم الهاتف:</strong> <span id="confirmPhone"></span></p>
+                <p style="margin-top: 20px; font-size: 1.2em;"><strong>المبلغ الإجمالي:</strong> <span style="color: #e74c3c;">299 درهم</span></p>
+            </div>
+
+            <p style="font-size: 1.1em; margin: 30px 0;">
+                📞 سيتصل بك فريقنا خلال 24 ساعة لتأكيد الطلب<br>
+                🚚 التوصيل خلال 2-4 أيام عمل<br>
+                💵 الدفع عند الاستلام
+            </p>
+
+            <a href="https://wa.me/212XXXXXXXXX?text=مرحباً، لدي سؤال بخصوص طلبي" class="whatsapp-button" target="_blank">
+                <svg width="25" height="25" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                تواصل معنا عبر واتساب
+            </a>
+
+            <p style="margin-top: 40px; color: #999;">
+                رقم الطلب: #<span id="orderNumber"></span>
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2025 جميع الحقوق محفوظة | خدمة العملاء متاحة على مدار الساعة</p>
+        <p style="margin-top: 10px;">📧 contact@example.com | 📞 +212 6XX XXX XXX</p>
+    </div>
+
+    <script>
+        function scrollToForm() {
+            document.getElementById('orderForm').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function submitOrder(event) {
+            event.preventDefault();
+
+            // Get form values
+            const fullName = document.getElementById('fullName').value;
+            const city = document.getElementById('city').value;
+            const phone = document.getElementById('phone').value;
+
+            // Generate random order number
+            const orderNumber = 'MAR' + Math.floor(Math.random() * 1000000);
+
+            // Hide main content and show thank you page
+            document.getElementById('mainContent').style.display = 'none';
+            document.getElementById('thankYouPage').classList.add('active');
+
+            // Fill confirmation details
+            document.getElementById('confirmName').textContent = fullName;
+            document.getElementById('confirmCity').textContent = city;
+            document.getElementById('confirmPhone').textContent = phone;
+            document.getElementById('orderNumber').textContent = orderNumber;
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // Here you would typically send the order data to your backend
+            console.log('Order submitted:', { fullName, city, phone, orderNumber });
+
+            // Optional: Send to Google Sheets, backend API, etc.
+            // sendOrderToBackend({ fullName, city, phone, orderNumber });
+        }
+
+        // Optional: Function to send order to backend
+        // function sendOrderToBackend(orderData) {
+        //     fetch('YOUR_BACKEND_API_URL', {
+        //         method: 'POST',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //         },
+        //         body: JSON.stringify(orderData)
+        //     })
+        //     .then(response => response.json())
+        //     .then(data => console.log('Success:', data))
+        //     .catch((error) => console.error('Error:', error));
+        // }
+    </script>
+</body>
+</html>
